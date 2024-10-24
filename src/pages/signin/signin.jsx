@@ -2,8 +2,12 @@ import React, { useEffect, useState } from 'react'
 import "./signin.css"
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2';
+
 
 const Signin = () => {
+
+  const navigation = useNavigate()
 
   const [email, setEmail] = useState()
   const [password, setPassword] = useState()
@@ -29,7 +33,13 @@ const Signin = () => {
       }
     } catch (error) {
       console.log({ error });
-      alert(error?.response?.data.msg)
+      Swal.fire({
+        icon: 'warning', 
+        title: 'Error',
+        text: error?.response?.data?.msg || 'An unexpected error occurred!',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#3085d6', // 
+      });
     }
     setIsLoading(false)
   }
@@ -86,7 +96,7 @@ const Signin = () => {
                 placeholder="Enter your password"
               />
             </div>
-            <div className="forgot">Forgot Password?</div>
+            <button onClick={() => navigation("/forgot")} className="forgot">Forgot Password?</button>
             <div onClick={login} className="button-login">
               {isLoading ? "loading..." : "login"}
             </div>

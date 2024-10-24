@@ -1,15 +1,20 @@
 import React from 'react'
 import Navbar from './components/navbar'
+import Footer from './components/footer'
+import { useNavigate } from 'react-router-dom'
 
-const HomePage= () => {
-  return (
-    <div>
-      <Navbar/>
-      <div className="relative">
-                <div className="absolute flex justify-center items-center top-[100px] w-full">
+
+const HomePage = () => {
+    const navigate = useNavigate()
+    return (
+
+        <div>
+            <Navbar />
+            <div className="relative">
+                <div className="absolute flex justify-center items-center mt-32 w-full">
                     <img src="/images/background.png" alt="Background" className="w-[99%]" />
                 </div>
-                <div className="relative top-[100px] pl-[120px] z-10">
+                <div className="relative top-[120px] pl-[120px]">
                     <div className="pt-[24px] pr-[30px] pl-[750px] relative">
                         <div className="flex items-center bg-white rounded-full w-[300px] h-[55px] shadow-md">
                             <input
@@ -26,7 +31,8 @@ const HomePage= () => {
                         </div>
                     </div>
                 </div>
-                <div className='relative top-[60px] pl-[120px] z-10'>
+                <section id="/"></section>
+                <div className='relative top-[60px] pl-[120px]'>
                     <div className="judul flex flex-col items-start justify-start pt-12 font-bold text-white text-justify">
                         <h1 className="text-5xl ">Start Your Day with <br /> Coffee and Good Meals</h1>
                     </div>
@@ -40,7 +46,7 @@ const HomePage= () => {
                     </div>
                 </div>
             </div>
-            <div className="box bg-white flex relative h-[200px] w-[80%] top-[150px] right-[-10%] rounded-lg shadow-md z-10">
+            <div className="box bg-white flex relative h-[200px] w-[80%] top-[190px] right-[-10%] rounded-lg shadow-md">
                 <div className="isi-box flex justify-around items-center w-full">
                     <div className="icon-left flex items-center gap-5">
                         <img className="w-12 h-12" src="/images/icon/user.png" alt="User Icon" />
@@ -79,7 +85,6 @@ const HomePage= () => {
                     <p className="text-base text-gray-600">
                         You can explore the menu that we provide with fun and <br /> have their own taste and make your day better.
                     </p>
-
                     <ul className="space-y-3">
                         <li className="list-none text-gray-600 flex items-center gap-2">
                             <div className=" rounded-full w-6 h-6 flex justify-center items-center">
@@ -113,10 +118,8 @@ const HomePage= () => {
                     <h1 className="text-3xl font-bold">Here is People’s Favorite</h1>
                     <p className='text-gray-600'>Let’s choose and have a bit taste of people’s favorite. It might be yours too!</p>
                 </div>
-
                 {/* Box People */}
                 <div className="box-people flex flex-row justify-evenly pt-[100px] w-80%">
-
                     {/* Box 1 - Hazelnut Latte */}
                     <div className="box-1 flex flex-col h-[760px] w-[330px] bg-white border-2 border-[#DDDDDD] rounded-[10px] items-center justify-around hover:border-[#6A4029]">
                         <img className="relative top-[20px] mb-[-70px]" src="/images/icon/Hazelnut.png" alt="Hazelnut Latte" />
@@ -129,7 +132,6 @@ const HomePage= () => {
                             </button>
                         </div>
                     </div>
-
                     {/* Box 2 - Pinky Promise */}
                     <div className="box-2 flex flex-col h-[760px] w-[330px] bg-white border-2 border-[#DDDDDD] rounded-[10px] items-center justify-around hover:border-[#6A4029]">
                         <img className="relative top-[20px] mb-[-70px] w-52 h-52" src="/images/icon/pinky_promise.png" alt="Hazelnut Latte" />
@@ -142,7 +144,6 @@ const HomePage= () => {
                             </button>
                         </div>
                     </div>
-
                     {/* Box 3 - Chicken Wings */}
                     <div className="box-2 flex flex-col h-[760px] w-[330px] bg-white border-2 border-[#DDDDDD] rounded-[10px] items-center justify-around hover:border-[#6A4029]">
                         <img className="relative top-[20px] mb-[-70px] w-52 h-52" src="/images/icon/chiken.png" alt="Hazelnut Latte" />
@@ -157,7 +158,6 @@ const HomePage= () => {
                     </div>
                 </div>
             </div>
-
             <div className="visit bg-[#f8f8f8] h-[1000px] pb-[80px] -mt-16">
                 <div className="content-visit pt-[100px] flex flex-col items-center justify-center">
                     <div className="judul-content flex flex-col gap-[24px] text-center">
@@ -171,22 +171,111 @@ const HomePage= () => {
                     </div>
                 </div>
             </div>
-            * <div className="container-partner">
-                    <h1 className="text-center py-12">Our Partner</h1>
-                    <div className="partner flex justify-center">
-                        <div className="content-partner flex flex-col items-center relative">
-                            <div className="logo-partner flex flex-row justify-between items-center gap-5 mb-24">
-                                <img src="/images/netfilx.svg" alt="netfilx" />
-                                <img src="/images/reddit.svg" alt="reddit" />
-                                <img src="/images/amazon.svg" alt="amazon" />
-                                <img src="/images/discord.svg" alt="discord" />
-                                <img src="/images/spotify.svg" alt="spotify" />
+            <div className="container-partner">
+                <h1 className="text-center py-12 font-bold text-4xl">Our Partner</h1>
+                <div className=" partner flex justify-center">
+                    <div className="content-partner flex flex-col items-center relative">
+                        <div className="logo-partner flex flex-row justify-between items-center gap-5 mb-24">
+                            <img src="/images/icon/sponsored.png" alt="netfilx" />
+                        </div>
+                    </div>
+                </div>
+                <div className="container-slider">
+                    <div className="judul-slider flex flex-col items-center gap-5 mb-20 text-center">
+                        <h1 className="text-3xl font-bold">
+                            Loved by Thousands of <br /> Happy Customers
+                        </h1>
+                        <p className="text-lg">
+                            These are the stories of our customers who have visited us with great <br /> pleasure.
+                        </p>
+                    </div>
+                    <div className="box-slider flex justify-between w-[90%] mx-auto h-[400px]">
+                        <div className="box-slider-1 w-[380px] h-[230px] bg-[#f8f8f8] border-2 border-[#DDDDDD] rounded-lg hover:border-[#6A4029] hover:bg-white p-5">
+                            <div className="nama-1 flex items-center gap-5">
+                                <img src="/images/Viezh.png" alt="foto" className="w-[15%]" />
+                                <div className="nama-viezh-robert flex justify-between w-full">
+                                    <div className="robert flex flex-col">
+                                        <span className="font-bold text-lg">Viezh Robert</span>
+                                        <span className="text-sm">Warsaw, Poland</span>
+                                    </div>
+                                    <div className="rating flex items-center">
+                                        <img src="/images/Ratting.png" alt="Rating" className="w-4 h-4 mr-1" />
+                                        <img src="/images/star_ratting.png" alt='Ratting' className="w-7 h-7" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="coment mt-5">
+                                <p className="text-base">“Wow... I am very happy to spend my whole day here. The Wi-Fi is good, and the coffee and meals though. I like it here!! Very recommended!"</p>
+                            </div>
+                        </div>
+                        <div className="box-slider-1 w-[380px] h-[230px] bg-[#f8f8f8] border-2 border-[#DDDDDD] rounded-lg hover:border-[#6A4029] hover:bg-white p-5">
+                            <div className="nama-1 flex items-center gap-5">
+                                <img src="/images/Yessika.png" alt="chat" className="w-[15%]" />
+                                <div className="nama-viezh-robert flex justify-between w-full">
+                                    <div className="robert flex flex-col">
+                                        <span className="font-bold text-lg">Yessica Christy</span>
+                                        <span className="text-sm">Shanxi, China</span>
+                                    </div>
+                                    <div className="rating flex items-center">
+                                        <img src="/images/Ratting.png" alt="Rating" className="w-4 h-4 mr-1" />
+                                        <img src="/images/star_ratting.png" alt='chat' className="w-7 h-7" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="coment mt-5">
+                                <p className="text-base">“I like it because I like to travel far and still can make my day better just by drinking their Hazelnut Latte."</p>
+                            </div>
+                        </div>
+                        <div className="box-slider-1 w-[380px] h-[230px] bg-[#f8f8f8] border-2 border-[#DDDDDD] rounded-lg hover:border-[#6A4029] hover:bg-white p-5">
+                            <div className="nama-1 flex items-center gap-5">
+                                <img src="/images/Kim.png" alt="" className="w-[15%]" />
+                                <div className="nama-viezh-robert flex justify-between w-full">
+                                    <div className="robert flex flex-col">
+                                        <span className="font-bold text-lg">Kim Young Jou</span>
+                                        <span className="text-sm">Seoul, South Korea</span>
+                                    </div>
+                                    <div className="rating-3 flex items-center gap-2">
+                                        <span className="text-lg">4.5</span>
+                                        <img src="/images/star_ratting.png" alt='Ratting' className="w-7 h-7" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="coment mt-5">
+                                <p className="text-base">“This is very unusual for my taste, I haven’t liked coffee before but their coffee is the best! and yup, you have to order the chicken wings, the best in town!”</p>
                             </div>
                         </div>
                     </div>
-                </div> 
-    </div>
-  )
+                    <div className="navigasi flex justify-between items-center w-[85%] mx-auto mt-[-50px]">
+                        <div className="titik">
+                            <img src="/images/titik.png" alt="Navigation dots" className="w-28 h-15" />
+                        </div>
+                        <button className="panah flex items-center bottom-400 right-1 ">
+                            <img src="/images/icon/left.png" alt="Left arrow" className="w-12 h-12 " />
+                            <img className="w-28 h-28 mt-4" src="/images/right.png" alt="Right arrow " />
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div className="promo flex justify-center left-44 bg-white h-[200px] w-[75%] top-[20px] shadow-lg rounded-lg relative">
+                <div className="content-promo flex flex-row justify-between w-4/5 items-center px-2 pb-8">
+                    <div className="text-promo">
+                        <h1 className="text-black text-left text-4xl font-bold pt-6">
+                            Check our promo <br /> today!
+                        </h1>
+                        <p className="text-black text-left p-2">Let's see the deals and pick yours!</p>
+                    </div>
+                    <div onClick={() => {
+                        navigate("/Promotion");
+                    }} className="btn-promo">
+                        <button className="bg-[#FFBA33] w-[250px] h-[55px] font-extrabold text-[#6A4029] mt-5 shadow-md hover:bg-[#6A4029] hover:text-white rounded-xl">
+                            See Promo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <Footer />
+        </div>
+    )
 }
 
 export default HomePage
