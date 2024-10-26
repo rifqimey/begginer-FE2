@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './components/navbar';
-import Footer from './components/footer';
+
 
 const Promotion = () => {
     const [products, setProducts] = useState([]); // Variabel untuk menyimpan produk

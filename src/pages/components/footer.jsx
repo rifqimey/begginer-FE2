@@ -1,9 +1,10 @@
 import React from 'react'
 
+
 const Footer = () => {
   return (
     <div>
-       <div className="container-footer bg-[#F8F8F8] h-[450px]">
+      <div className="container-footer bg-[#F8F8F8] h-[450px]">
         <div className="row flex flex-row justify-around pt-[180px] -mt-10 px-[20px] gap-[120px]">
           {/* Left Section */}
           <div className="footer-left flex flex-col gap-[20px]">
@@ -34,11 +35,11 @@ const Footer = () => {
                 <h4 className="font-bold">Product</h4>
               </div>
               <ul className="list-footer flex flex-col items-start gap-[20px]">
-                <li><a href="#" className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Download</a></li>
-                <li><a href="#" className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Pricing</a></li>
-                <li><a href="#" className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Locations</a></li>
-                <li><a href="#" className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Countries</a></li>
-                <li><a href="#" className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Blog</a></li>
+                <li><span className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Download</span></li>
+                <li><span className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Pricing</span></li>
+                <li><span className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Locations</span></li>
+                <li><span className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Countries</span></li>
+                <li><span className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Blog</span></li>
               </ul>
             </div>
 
@@ -48,10 +49,10 @@ const Footer = () => {
                 <h4 className="font-bold">Engage</h4>
               </div>
               <ul className="list-footer flex flex-col items-start gap-[20px]">
-                <li><a href="#" className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Coffe Shop</a></li>
-                <li><a href="#" className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">About Us</a></li>
-                <li><a href="#" className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Contact Us</a></li>
-                <li><a href="#" className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Support</a></li>
+                <li><span className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Coffee Shop</span></li>
+                <li><span className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">About Us</span></li>
+                <li><span className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Contact Us</span></li>
+                <li><span className="text-[#4F5665] hover:text-[#6A4029] hover:underline hover:font-medium">Support</span></li>
               </ul>
             </div>
           </div>
